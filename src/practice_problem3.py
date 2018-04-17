@@ -280,7 +280,6 @@ def practice_problem3b(sequence):
     else:
         return False
 
-
     ####################################################################
     # DONE: 3. Implement and test this function.
     #     The testing code is already written for you (above).
@@ -473,9 +472,8 @@ def practice_problem3d(sequence):
     #    TIME ESTIMATE:   8 minutes for each part of this problem.
     ####################################################################
 
-
     ####################################################################
-    # TODO: 6. Just ABOVE this TODO, you should have implemented
+    # DONE: 6. Just ABOVE this TO-DO, you should have implemented
     #     a solution for the   practice_problem3d   function.
     #     Here, put ANOTHER solution, as follows:
     #
@@ -489,6 +487,11 @@ def practice_problem3d(sequence):
     #
     #          This solution should *** HAVE NO LOOP (no FOR). ***
     ####################################################################
+    seq = practice_problem3c(sequence)
+    if len(seq) != 0:
+        return seq[0]
+    else:
+        return -1
 
 
 def run_test_practice_problem3e():
