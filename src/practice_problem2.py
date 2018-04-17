@@ -42,7 +42,7 @@ def main():
 def run_test_practice_problem2a():
     """ Tests the   practice_problem2a  function. """
     # ------------------------------------------------------------------
-    # TODO: 2. Implement this TEST function.
+    # DONE: 2. Implement this TEST function.
     #   It TESTS the  practice_problem2a  function defined below.
     #   Include at least **   4 reasonable   ** tests.
     #
@@ -55,6 +55,38 @@ def run_test_practice_problem2a():
     print('--------------------------------------------------')
     print('Testing the   practice_problem2a   function:')
     print('--------------------------------------------------')
+
+    # Test 1:
+    sequence = [1, 2, 4, 8, 16]
+    delta = 3
+    expected = [4, 5, 7, 11, 19]
+    actual = practice_problem2a(sequence, delta)
+    print("Expected:", expected)
+    print("Actual:  ", actual)
+
+    # Test 2:
+    sequence = [2, 10, 5, -20, 8]
+    delta = 6
+    expected = [8, 16, 11, -14, 14]
+    actual = practice_problem2a(sequence, delta)
+    print("Expected:", expected)
+    print("Actual:  ", actual)
+
+    # Test 3:
+    sequence = [0, 13, 26, 39]
+    delta = -13
+    expected = [-13, 0, 13, 26]
+    actual = practice_problem2a(sequence, delta)
+    print("Expected:", expected)
+    print("Actual:  ", actual)
+
+    # Test 4:
+    sequence = [7, 29, 8, 63, 11, 90, 37, 15, 6]
+    delta = -45
+    expected = [-38, -16, -37, 18, -34, 45, -8, -30, -39]
+    actual = practice_problem2a(sequence, delta)
+    print("Expected:", expected)
+    print("Actual:  ", actual)
 
 
 def practice_problem2a(sequence, delta):
@@ -75,8 +107,12 @@ def practice_problem2a(sequence, delta):
       :type sequence: [int]
       :type delta:    int
     """
+    sequence2 = []
+    for k in range(len(sequence)):
+        sequence2 = sequence2 + [sequence[k] + delta]
+    return sequence2
     ####################################################################
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #     The testing code is already written for you (above).
     ####################################################################
     # DIFFICULTY AND TIME RATINGS (see top of this file for explanation)
@@ -169,6 +205,8 @@ def practice_problem2b(sequence):
     Type hints:
       :type sequence [str]
     """
+    for k in range(len(sequence)):
+
     ####################################################################
     # TODO: 4. Implement and test this function.
     #     The testing code is already written for you (above).

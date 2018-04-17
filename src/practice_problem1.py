@@ -39,7 +39,7 @@ def main():
     # UN-comment tests as you work the problems.
     ####################################################################
 
-#     run_test_init()
+    run_test_init()
 #     run_test_append_string()
 #     run_test_double()
 #     run_test_shrink()
@@ -93,8 +93,14 @@ class Box(object):
           :type contents: str
           :type volume: int
         """
+        if len(contents) <= volume:
+            self.contents = contents
+            self.volume = volume
+        else:
+            self.contents = ''
+            self.volume = volume
         # --------------------------------------------------------------
-        # TODO: 2. Implement and test this function.
+        # DONE: 2. Implement and test this function.
         #     See the testing code (below) for more examples.
         # --------------------------------------------------------------
         # --------------------------------------------------------------
@@ -134,6 +140,7 @@ class Box(object):
         Type hints:
           :type additional_contents: str
         """
+
         # --------------------------------------------------------------
         # TODO: 3. Implement and test this function.
         #     See the testing code (below) for more examples.
@@ -162,7 +169,7 @@ class Box(object):
         What comes in:
           -- self
         What goes out:
-          Returrns a string that is whatever substring of the
+          Returns a string that is whatever substring of the
           doubled contents did not fit in this Box
           (or the empty string if the entire doubled contents fit)
         Side effects:
